@@ -1,0 +1,5 @@
+# BEGIN NinjaFirewall
+<IfModule mod_php7.c>
+   php_value auto_prepend_file /var/www/html/ninja2/firewall.php
+</IfModule>
+# END NinjaFirewall

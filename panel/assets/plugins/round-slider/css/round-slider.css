@@ -1,0 +1,108 @@
+
+
+.round-slider-info .rs-range-color  {
+    background: radial-gradient(ellipse at bottom, #87caff 0%, #00c8ff 34%, #0072ff 66%, rgba(0, 0, 0, 1) 100%);
+}
+.round-slider-info .rs-path-color  {
+    background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 1) 0%, rgba(169, 173, 174, 1) 34%, rgba(255, 255, 255, 1) 66%, rgba(5, 0, 0, 1) 100%);
+}
+.round-slider-info .rs-handle  {
+    background: radial-gradient(ellipse at center, rgba(228, 228, 228, 1) 0%, rgba(179, 179, 179, 1) 34%, rgb(102, 91, 98) 100%);
+}
+.round-slider-info .rs-border  {
+    border-color: rgba(255,255,255,.125);
+}
+
+.round-slider-danger .rs-range-color  {
+    background: radial-gradient(ellipse at bottom, #FFC107 0%, #FFC107 34%, #E91E63 66%, rgba(0, 0, 0, 1) 100%);
+}
+.round-slider-danger .rs-path-color  {
+    background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 1) 0%, rgba(169, 173, 174, 1) 34%, rgba(255, 255, 255, 1) 66%, rgba(5, 0, 0, 1) 100%);
+}
+.round-slider-danger .rs-handle  {
+    background: radial-gradient(ellipse at center, rgba(228, 228, 228, 1) 0%, rgba(179, 179, 179, 1) 34%, rgb(102, 91, 98) 100%);
+}
+.round-slider-danger .rs-border  {
+    border-color: rgba(255,255,255,.125);
+}
+
+.round-slider-success .rs-range-color  {
+    background: radial-gradient(ellipse at bottom, #FFC107 0%, #cddc35 34%, #08a50e 66%, rgba(0, 0, 0, 1) 100%);
+}
+.round-slider-success .rs-path-color  {
+    background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 1) 0%, rgba(169, 173, 174, 1) 34%, rgba(255, 255, 255, 1) 66%, rgba(5, 0, 0, 1) 100%);
+}
+.round-slider-success .rs-handle  {
+    background: radial-gradient(ellipse at center, rgba(228, 228, 228, 1) 0%, rgba(179, 179, 179, 1) 34%, rgb(102, 91, 98) 100%);
+}
+.round-slider-success .rs-border  {
+    border-color: rgba(255,255,255,.125);
+}
+
+.round-slider-warning .rs-range-color  {
+    background: radial-gradient(ellipse at bottom, #FFC107 0%, #ffd200 34%, #f7971e 66%, rgba(0, 0, 0, 1) 100%);
+}
+.round-slider-warning .rs-path-color  {
+    background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 1) 0%, rgba(169, 173, 174, 1) 34%, rgba(255, 255, 255, 1) 66%, rgba(5, 0, 0, 1) 100%);
+}
+.round-slider-warning .rs-handle  {
+    background: radial-gradient(ellipse at center, rgba(228, 228, 228, 1) 0%, rgba(179, 179, 179, 1) 34%, rgb(102, 91, 98) 100%);
+}
+.round-slider-warning .rs-border  {
+    border-color: rgba(255,255,255,.125);
+}
+
+
+.round-slider-primary .rs-range-color  {
+    background: radial-gradient(ellipse at bottom, #FFC107 0%, #d13adf 34%, #8f50ff 66%, rgba(0, 0, 0, 1) 100%);
+}
+.round-slider-primary .rs-path-color  {
+    background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 1) 0%, rgba(169, 173, 174, 1) 34%, rgba(255, 255, 255, 1) 66%, rgba(5, 0, 0, 1) 100%);
+}
+.round-slider-primary .rs-handle  {
+    background: radial-gradient(ellipse at center, rgba(228, 228, 228, 1) 0%, rgba(179, 179, 179, 1) 34%, rgb(102, 91, 98) 100%);
+}
+.round-slider-primary .rs-border  {
+    border-color: rgba(255,255,255,.125);
+}
+
+
+.round-slider-secondary .rs-range-color  {
+    background: radial-gradient(ellipse at bottom, #FFC107 0%, #00dbde 34%, #fc00ff 66%, rgba(0, 0, 0, 1) 100%);
+}
+.round-slider-secondary .rs-path-color  {
+    background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 1) 0%, rgba(169, 173, 174, 1) 34%, rgba(255, 255, 255, 1) 66%, rgba(5, 0, 0, 1) 100%);
+}
+.round-slider-secondary .rs-handle  {
+    background: radial-gradient(ellipse at center, rgba(228, 228, 228, 1) 0%, rgba(179, 179, 179, 1) 34%, rgb(102, 91, 98) 100%);
+}
+.round-slider-secondary .rs-border  {
+    border-color: rgba(255,255,255,.125);
+}
+
+
+.round-slider-dark .rs-range-color  {
+    background: radial-gradient(ellipse at bottom, #FFC107 0%, #616060 34%, #000000 66%, rgba(0, 0, 0, 1) 100%);
+}
+.round-slider-dark .rs-path-color  {
+    background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 1) 0%, rgba(169, 173, 174, 1) 34%, rgba(255, 255, 255, 1) 66%, rgba(5, 0, 0, 1) 100%);
+}
+.round-slider-dark .rs-handle  {
+    background: radial-gradient(ellipse at center, rgba(228, 228, 228, 1) 0%, rgba(179, 179, 179, 1) 34%, rgb(102, 91, 98) 100%);
+}
+.round-slider-dark .rs-border  {
+    border-color: rgba(255,255,255,.125);
+}
+
+.round-slider-white .rs-range-color  {
+    background: radial-gradient(ellipse at bottom, #FFC107 0%, #616060 34%, #fff 66%, rgba(0, 0, 0, 1) 100%);
+}
+.round-slider-white .rs-path-color  {
+        background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 1) 0%, rgb(169, 173, 174) 34%, rgba(255, 255, 255, 0.11) 66%, rgba(5, 0, 0, 1) 100%);
+}
+.round-slider-white .rs-handle  {
+    background: radial-gradient(ellipse at center, rgba(228, 228, 228, 1) 0%, rgba(179, 179, 179, 1) 34%, rgb(102, 91, 98) 100%);
+}
+.round-slider-white .rs-border  {
+    border-color: rgba(255,255,255,.125);
+}

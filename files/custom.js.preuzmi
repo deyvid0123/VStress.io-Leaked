@@ -1,0 +1,196 @@
+$(document).ready(function () {
+    'use strict';
+
+
+    /*-------------------------------------
+    Loader Wrap
+    -------------------------------------*/
+    $(window).on('load', function () {
+        $("#preloader").delay(200).fadeOut();
+    });
+
+    //One Page Nav
+    $('#one-page-nav').onePageNav({
+        currentClass: 'active',
+        scrollSpeed: 500,
+        scrollOffset: 60,
+        scrollThreshold: 0.2,
+        easing: 'swing',
+        filter: ':not(.external)'
+    });
+
+    // Mobile Navigation 
+    function mobileSubNav() {
+        $('body').on('click', function (e) {
+            if ($('.navbar-collapse').is(':visible') && $('.navbar-toggle').is(':visible') && !$(e.target).is(".dropdown")) {
+                $('.navbar-collapse').collapse('hide');
+            }
+        });
+
+        $('.dropdown').each(function () {
+            $(this).unbind('click');
+
+            $(this).on('click', function () {
+                $(this).children('.dropdown-menu').slideToggle();
+            });
+        });
+    }
+
+    if ($(window).width() < 992) {
+        mobileSubNav();
+    } else {
+        $('.dropdown-menu').css('display', 'block');
+    }
+
+
+    //WOW
+    var wow = new WOW({
+        mobile: false
+    });
+    wow.init();
+
+    //Steller Parallax
+    $(window).stellar({
+        responsive: true,
+        positionProperty: 'position',
+        verticalOffset: 50,
+        horizontalScrolling: false
+    });
+
+    //Masonry 
+    $('.masonry').isotope({
+        itemSelector: '.masonry-item',
+        masonry: {
+            columnWidth: '.grid-sizer',
+            gutter: 30
+        }
+    });
+
+    // Counter Up 
+    $(".count").counterUp({
+        delay: 10,
+        time: 2000
+    });
+    /*-------------------------------------
+        Magnific Popup
+        -------------------------------------*/
+    $('.image-large').each(function () {
+        $(this).magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+    });
+
+    $('.video-play').each(function () {
+        $(this).magnificPopup({
+            type: 'iframe'
+        });
+
+        $.extend(true, $.magnificPopup.defaults, {
+            iframe: {
+                patterns: {
+                    youtube: {
+                        index: 'youtube.com/',
+                        id: 'v=',
+                        src: 'http://www.youtube.com/embed/%id%?autoplay=1'
+                    }
+                }
+            }
+        });
+    });
+
+    //Screenshot carousel
+    $('#screenshot-carousel').owlCarousel({
+        items: 5,
+        itemsDesktop: [1199, 5],
+        itemsDesktopSmall: [991, 3],
+        itemsTablet: [767, 1],
+        itemsMobile: [479, 1],
+        slideSpeed: 200,
+        autoPlay: 3000,
+        stopOnHover: true,
+        navigation: true,
+        navigationText: ['<i class=\"fa fa-angle-left\"></i>', '<i class=\"fa fa-angle-right\"></i>'],
+        pagination: false,
+    });
+
+    //Testimonial Carousel
+    $('#review-carousel').owlCarousel({
+        items: 3,
+        itemsDesktop: [1199, 3],
+        itemsDesktopSmall: [991, 3],
+        itemsTablet: [767, 2],
+        itemsMobile: [479, 1],
+        slideSpeed: 200,
+        autoPlay: 3000,
+        margin: 30,
+        stopOnHover: true,
+        stopOnHover: true,
+        navigation: false,
+        pagination: false,
+    });
+
+    // Contact form
+    // Function for email address validation
+    function isValidEmail(emailAddress) {
+        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+
+        return pattern.test(emailAddress);
+
+    }
+    $("#contactForm").on('submit', function (e) {
+        e.preventDefault();
+        var data = {
+            name: $("#name").val(),
+            email: $("#email").val(),
+            message: $("#message").val()
+        };
+
+        if (isValidEmail(data['email']) && (data['message'].length > 1) && (data['name'].length > 1)) {
+            $.ajax({
+                type: "POST",
+                url: "sendmail.php",
+                data: data,
+                success: function () {
+                    $('#contactForm .input-success').delay(500).fadeIn(1000);
+                    $('#contactForm .input-error').fadeOut(500);
+                }
+            });
+        } else {
+            $('#contact-form .input-error').delay(500).fadeIn(1000);
+            $('#contact-form .input-success').fadeOut(500);
+        }
+
+        return false;
+    });
+
+
+    //Subscription
+    $(".subscribe-form").ajaxChimp({
+        callback: mailchimpResponse,
+        url: "http://codepassenger.us10.list-manage.com/subscribe/post?u=6b2e008d85f125cf2eb2b40e9&id=6083876991" // Replace your mailchimp post url inside double quote "".  
+    });
+
+    function mailchimpResponse(resp) {
+        if (resp.result === 'success') {
+
+            $('.newsletter-success').html(resp.msg).fadeIn().delay(3000).fadeOut();
+
+        } else if (resp.result === 'error') {
+            $('.newsletter-error').html(resp.msg).fadeIn().delay(3000).fadeOut();
+        }
+    }
+
+
+    $(window).on('resize orientationchange', function () {
+        if ($(window).width() < 992) {
+            mobileSubNav();
+        } else {
+            $('.dropdown-menu').css('display', 'block');
+        }
+    });
+
+
+});
